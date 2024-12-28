@@ -1,0 +1,56 @@
+services:
+    bot:
+        image: redbuld/bot:latest
+        restart: unless-stopped
+        environment:
+            BOT_TOKEN: ""
+        volumes:
+            - ./bot/global.json:/app/configs/global.json
+            - results:/mnt/results
+            - temp:/mnt/temp
+            - archiving:/mnt/archiving
+        depends_on:
+            - database
+            - redis
+        networks:
+            - tgbot
+    queue:
+        image: redbuld/queue:latest
+        restart: unless-stopped
+        volumes:
+            - ./queue/global.json:/app/configs/global.json
+            - ./queue/queue.json:/app/configs/queue.json
+            - results:/mnt/results
+            - temp:/mnt/temp
+            - archiving:/mnt/archiving
+        depends_on:
+            - bot
+        networks:
+            - tgbot
+    redis:
+        image: redis:7-alpine
+        restart: unless-stopped
+        networks:
+            - tgbot
+    database:
+        image: mysql:8.4
+        restart: unless-stopped
+        environment:
+            MYSQL_ROOT_PASSWORD: secret
+        volumes:
+            - ./mysql/01-users.sql:/docker-entrypoint-initdb.d/01-users.sql
+            - ./mysql/02-databases.sql:/docker-entrypoint-initdb.d/02-databases.sql
+        networks:
+            - tgbot
+volumes:
+    temp:
+        driver: local
+    results:
+        driver: local
+    archiving:
+        driver: local
+networks:
+    tgbot:
+        name: tgbot
+        driver_opts:
+            com.docker.network.bridge.host_binding_ipv4: "127.0.0.1"
