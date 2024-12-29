@@ -32,12 +32,18 @@
 1. Установить docker/Docker Desktop
 2. Скачать ZIP-архив и распаковать в папку
 ![enter image description here](https://github.com/RedBuld/bot-docker/blob/main/README/3.save_git.png?raw=true)
-4. Выбрать какой вариант вы хотите использовать (см. первый блок)
-5. Получить необходимые токены (см. пункты выше):
+3. Выбрать какой вариант вы хотите использовать (см. первый блок)
+4. Получить необходимые токены (см. пункты выше):
 	- Полученный **токен бота** подставить в указанное поле в файле `.yaml`
 	- ![enter image description here](https://github.com/RedBuld/bot-docker/blob/main/README/1.place_token_to_file.png?raw=true)
 	- Полученные **api_id** и **api_hash**  подставить в указанные поля в файле `.yaml`
 	- ![enter image description here](https://github.com/RedBuld/bot-docker/blob/main/README/2.place_api_to_file.png?raw=true)
-6. В папке открыть терминал ( в случае windows зажатием Shift и нажатием Правой Кнопки Мыши) и выполнить команду: `docker compose -f ФАЙЛ.yaml up`
+5. В папке открыть терминал ( в случае windows зажатием Shift и нажатием Правой Кнопки Мыши) и выполнить команду:
+    - `minimal.yaml` - `docker compose -f minimal.yaml up`
+    - `large_files.yaml` - `docker compose -f large_files.yaml up`
+    - `full_build.yaml` - `docker compose -f full_build.yaml up`
 7. Дождаться, когда прекратится активное мельтешение логов и нажать `Ctrl + C`
-8. Выполнить команду `docker compose -f ФАЙЛ.yaml up -d`
+8. Выполнить команду
+    - `minimal.yaml` - `docker compose -f minimal.yaml up -d`
+    - `large_files.yaml` - `docker compose -f large_files.yaml up -d`
+    - `full_build.yaml` - `docker compose -f full_build.yaml up -d`
