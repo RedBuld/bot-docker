@@ -1,15 +1,18 @@
 ## Типы docker-compose файлов
 
 `minimal.yaml`
+
 - Бот работает в режиме поллинга (только чат-режим)
 - Все файлы превышающие по размеру 49мб будут заархивированы в rar с разбивкой на части по 49мб
 
 `large_files.yaml`
+
 - Бот работает в режиме поллинга (только чат-режим)
 - Все файлы превышающие по размеру 1549мб будут заархивированы в rar с разбивкой на части по 1549мб
 - **Требует получения APP-токена**
 
 `full_build.yaml`
+
 - Бот работает в режиме webhook ( чат-режим и web-режим )
 - Все файлы превышающие по размеру 1549мб будут заархивированы в rar с разбивкой на части по 1549мб
 - **Требует получения APP-токена**
@@ -30,7 +33,7 @@
 
 ## Запуск бота
 
-1. Установить docker/Docker Desktop
+1. Установить docker / Docker Desktop
 2. Скачать ZIP-архив и распаковать в папку
 
 ![enter image description here](https://github.com/RedBuld/bot-docker/blob/main/README/3.save_git.png?raw=true)
@@ -45,12 +48,12 @@
 
 	![enter image description here](https://github.com/RedBuld/bot-docker/blob/main/README/2.place_api_to_file.png?raw=true)
 
-7. В папке открыть терминал ( в случае windows зажатием Shift и нажатием Правой Кнопки Мыши) и выполнить команду:
-    - `minimal.yaml` - `docker compose -f minimal.yaml up`
-    - `large_files.yaml` - `docker compose -f large_files.yaml up`
-    - `full_build.yaml` - `docker compose -f full_build.yaml up`
-8. Дождаться, когда прекратится активное мельтешение логов и нажать `Ctrl + C`
-9. Выполнить команду
-    - `minimal.yaml` - `docker compose -f minimal.yaml up -d`
-    - `large_files.yaml` - `docker compose -f large_files.yaml up -d`
-    - `full_build.yaml` - `docker compose -f full_build.yaml up -d`
+6. В папке открыть терминал ( в случае windows зажатием Shift и нажатием Правой Кнопки Мыши) и выполнить команду:
+    - Для файла `minimal.yaml`
+        - `docker compose -f minimal.yaml up -d`
+    - Для файла `large_files.yaml`
+        - `docker compose -f large_files.yaml up -d`
+    - Для файла `full_build.yaml`
+        - `docker compose -f full_build.yaml up -d`
+
+7. Бот запустится в течении 1-2 минут
