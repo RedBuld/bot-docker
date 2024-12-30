@@ -13,6 +13,7 @@ services:
             - 0.0.0.0:443:443
     bot:
         image: redbuld/bot:latest
+        pull_policy: always
         restart: unless-stopped
         environment:
             URL: ""
@@ -31,6 +32,7 @@ services:
             - tgbot
     queue:
         image: redbuld/queue:latest
+        pull_policy: always
         restart: unless-stopped
         environment:
             LOCAL_SERVER: "localapi"

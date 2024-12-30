@@ -1,6 +1,7 @@
 services:
     bot:
         image: redbuld/bot:latest
+        pull_policy: always
         restart: unless-stopped
         environment:
             BOT_TOKEN: ""
@@ -16,6 +17,7 @@ services:
             - tgbot
     queue:
         image: redbuld/queue:latest
+        pull_policy: always
         restart: unless-stopped
         volumes:
             - ./queue/global.json:/app/configs/global.json

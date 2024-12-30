@@ -65,7 +65,6 @@
             "active": true,
             "parameters": ["paging","images"],
             "allowed_groups": ["books"],
-            "force_proxy": true,
             "one_time": 1,
             "delay": 300,
             "delay_per_user": 600,
@@ -85,14 +84,12 @@
             "active": true,
             "parameters": ["paging","images","auth"],
             "allowed_groups": ["books"],
-            "force_proxy": true,
             "one_time": 1
         },
 		"booknet.ua": {
             "active": true,
             "parameters": ["paging","images","auth"],
             "allowed_groups": ["books"],
-            "force_proxy": true,
             "one_time": 1
         },
 		"books.yandex.ru": {
@@ -119,7 +116,6 @@
             "active": true,
             "parameters": ["paging","images","auth"],
             "allowed_groups": ["books"],
-            "force_proxy": true,
             "one_time": 1
         },
 		"dreame.com": {
@@ -141,7 +137,6 @@
             "active": true,
             "parameters": ["paging","images"],
             "allowed_groups": ["books"],
-            "force_proxy": true,
             "one_time": 1,
             "delay": 150,
             "delay_per_user": 300,
@@ -206,7 +201,6 @@
             "active": true,
             "parameters": ["paging","images","auth"],
             "allowed_groups": ["books"],
-            "force_proxy": true,
             "one_time": 1,
             "pattern": "{Author.Name} - {Book.Title}",
             "delay": 20,
@@ -221,7 +215,6 @@
             "active": true,
             "parameters": ["paging","auth"],
             "allowed_groups": ["books"],
-            "force_proxy": true,
             "one_time": 1,
             "pattern": "{Author.Name} - {Book.Title}",
             "delay": 180,
@@ -292,7 +285,6 @@
             "active": true,
             "parameters": ["paging","images","auth"],
             "allowed_groups": ["books"],
-            "force_proxy": true,
             "excluded_proxy": ["http://89.23.110.141:3128/"],
             "one_time_per_user": 1,
             "one_time": 2,
@@ -367,8 +359,6 @@
             "active": true,
             "parameters": ["paging","images","auth"],
             "allowed_groups": ["ranobe"],
-            "force_proxy": true,
-            "use_flare": true,
             "one_time": 1,
             "delay_per_user": 120
         },
@@ -391,7 +381,6 @@
             "active": true,
             "parameters": ["paging","images"],
             "allowed_groups": ["ranobe","manga"],
-            "force_proxy": true,
             "one_time": 1
         },
         "xn--80ac9aeh6f.xn--p1ai": {
@@ -419,8 +408,6 @@
             "active": false,
             "parameters": ["paging","force_images","auth"],
             "allowed_groups": ["manga"],
-            "force_proxy": true,
-            "use_flare": true,
             "one_time": 1,
             "page_delay": 1
         },
@@ -436,8 +423,6 @@
             "active": true,
             "parameters": ["paging","force_images","auth"],
             "allowed_groups": ["manga"],
-            "force_proxy": true,
-            "use_flare": true,
             "one_time": 1,
             "delay_per_user": 60
         },
@@ -445,8 +430,6 @@
             "active": true,
             "parameters": ["paging","force_images","auth"],
             "allowed_groups": ["manga"],
-            "use_flare": true,
-            "force_proxy": true,
             "one_time": 1,
             "delay_per_user": 60,
             "page_delay": 1
@@ -456,7 +439,6 @@
             "parameters": ["paging","force_images"],
             "one_time": 1,
             "allowed_groups": ["manga"],
-            "use_flare": true,
             "page_delay": 1,
             "delay": 60
         },
@@ -480,8 +462,6 @@
             "active": true,
             "parameters": ["paging","force_images","auth"],
             "allowed_groups": ["manga"],
-            "force_proxy": true,
-            "use_flare": true,
             "one_time": 1,
             "delay_per_user": 120
         },
@@ -489,8 +469,6 @@
             "active": true,
             "parameters": ["images"],
             "allowed_groups": ["wattpad"],
-            "force_proxy": true,
-            "use_flare": true,
             "one_time": 1,
             "delay": 120,
             "page_delay": 2
